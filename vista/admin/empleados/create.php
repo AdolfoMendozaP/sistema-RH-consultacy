@@ -11,7 +11,7 @@
 <body>
 <div class="container mt-4">
         <h1 class="text-center">Nuevo Empleado</h1>
-        <form action="../modelo/empleado.php" method="POST">
+        <form action="../../../modelo/empleadoAdmin.php" method="POST">
             <div class="form-group">
                 <label for="nombre">Nombre:</label>
                 <input type="text" name="nombre" class="form-control" required>

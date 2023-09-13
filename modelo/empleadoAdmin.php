@@ -27,12 +27,9 @@ try {
     $stmt->bindParam(':status', $status);
     $stmt->bindParam(':IDdepartamento', $iDdepartamento);
     $stmt->bindParam(':folio', $folio);
-
-    // Ejecutar la consulta
     $stmt->execute();
 
-    // Redirigir de nuevo a index.php después de la inserción
-    header('Location: ../empleados/index.php');
+    header('Location: ../vista/admin/empleados/');
     exit();
 } catch (PDOException $e) {
     echo "Error al insertar el empleado: " . $e->getMessage();
