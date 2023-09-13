@@ -1,0 +1,296 @@
+/***** HTML *****/
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+body
+{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/***** End HTML *****/
+
+/***** Menu lateral *****/
+header
+{
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	padding: 20px;
+	background: linear-gradient(to right, #0B0B61, #0101DF, #013ADF);
+}
+
+header #button-menu
+{
+	font-size: 30px;
+	color: #fff;
+	cursor: pointer;
+}
+
+.navegacion
+{
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 0%;
+	height: 100vh;
+	background: rgba(0,0,0,.0);
+
+}
+
+.navegacion ul
+{
+	width: 320px;
+	height: 100%;
+	background: #fff;
+	list-style: none;
+	position: absolute;
+	top: 0;
+	left: -320px;
+	transition: left .3s;
+}
+
+.navegacion .menu li.title-menu 
+{
+    padding: 20px;
+    text-align: center;
+}
+
+.navegacion .menu li.title-menu-ig
+{
+    padding: 20px;
+    text-align: center;
+    background: linear-gradient(to right,#0101DF, #013ADF,#2ECCFA);
+    color: #fff;
+	font-size: 25px;
+    font-weight: 500;
+}
+
+.navegacion .menu li.title-menu img 
+{
+    max-width: 100%; 
+    height: auto; 
+}
+
+
+.navegacion .menu a
+{
+	display: block;
+	padding: 30px;
+	border-bottom: 5px solid #013ADF;
+    background: #0B0B61;
+	font-size: 22px;
+	font-weight: 200;
+	text-decoration: none;
+    color: #fff;
+}
+
+.navegacion .menu a:hover
+{
+	background: #2ECCFA;
+    transition: all .3s ease;
+}
+
+.navegacion .menu li span.icon-menu
+{
+	margin-right: 12px;
+}
+
+.navegacion .menu .item-submenu > a::after
+{
+	font: normal normal normal 14px/1 FontAwesome;
+  	font-size: inherit;
+  	text-rendering: auto;
+  	-webkit-font-smoothing: antialiased;
+  	-moz-osx-font-smoothing: grayscale;
+	content: '\f105';
+
+	float: right;
+	color: #C5C5C5;
+}
+
+/***** SubMenu Categorias *****/
+
+.navegacion .submenu li.title-menu
+{
+    background: linear-gradient(to right,#0101DF, #013ADF,#2ECCFA);
+	color: #fff;
+    padding: 20px;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.navegacion .submenu li.go-back
+{
+	padding: 10px 20px;
+	background: #2ECCFA;
+	color: #fff;
+	font-size: 18px;
+	cursor: pointer;
+}
+
+.navegacion .submenu li.go-back::before
+{
+	font: normal normal normal 14px/1 FontAwesome;
+  	font-size: inherit;
+  	text-rendering: auto;
+  	-webkit-font-smoothing: antialiased;
+  	-moz-osx-font-smoothing: grayscale;
+	content: '\f0d9';
+	margin-right: 10px;
+}
+
+@media screen and (max-width: 320px)
+{
+	.navegacion ul{
+		width: 100%;
+	}
+}
+/***** End Menu lateral *****/
+
+/***** Modal *****/
+.boton-modal 
+{
+    position: fixed;
+    top: 15px;
+    right: 15px;
+}
+
+.boton-modal span{
+    margin-right: 10px;
+}
+
+.boton-modal label
+{
+    padding: 10px 15px;
+    background: #2ECCFA;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+
+.boton-modal label:hover 
+{
+    background: #8000FF;
+}
+
+#btn-modal
+{
+    display: none;
+}
+
+#container-modal
+{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0; left: 0;
+    background-color: rgba(144, 148, 150, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+#btn-modal:checked ~ #container-modal
+{
+    display: flex;
+}
+
+.modal-header {
+    color: #fff;
+    padding: 10px 20px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.modal-title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#content-modal
+{
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+#content-modal h2
+{
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+
+.btn-hover-grow:hover {
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+  }
+
+.cerrar-modal
+{
+    width:100%;
+    height: 100vh;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    top:2px; left: 2px;
+    z-index: 2px;
+}
+
+.btn-cerrar-modal span.fa-close {
+    color: #ffffff; /* Color inicial del icono */
+    transition: color 0.3s ease; /* Transición de color */
+}
+
+.btn-cerrar-modal:hover span.fa-close {
+    color: #ff0000; /* Cambio de color a rojo cuando se pasa el cursor */
+}
+
+@media screen and (max-width:800px) 
+{
+    #content-modal{
+        width: 90%;
+    }
+}
+/***** End Modal *****/
+
+/***** Session *****/
+
+/***** End Session *****/
+
+/***** contenido *****/
+#content 
+{
+    flex: 1;
+}
+
+
+/***** End contenido *****/
+
+/***** footer *****/
+footer 
+{
+    padding: 10px 0;
+    text-align: center;
+    position: sticky;
+    bottom: 0;
+}
+/***** End footer *****/
