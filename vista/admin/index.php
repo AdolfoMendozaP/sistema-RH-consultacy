@@ -1,3 +1,12 @@
+<?php
+session_start();
+require_once '../../modelo/conexion.php';
+
+$db = new Database();
+$con = $db->conectar();
+
+$nomUser = $_SESSION['usuario'];
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,10 +48,20 @@
 					</ul>
 				</li>
 			</ul>
+            
 		</nav>
+        <div class="dropdown position-absolute top-0 end-0 mt-2 me-2">
+            <label class="btn btn-primary dropdown-toggle" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fa fa-user"></i> <?php echo htmlspecialchars($nomUser['usuario']); ?>
+            </label>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <li><a class="dropdown-item" href="#">Soporte Tecnico</a></li>
+                <li><a class="dropdown-item" href="../../modelo/logout.php">Cerrar Sesión</a></li>
+            </ul>
+        </div>
+
     </header>
-
-
+   
     <script language="javascript" type="text/javascript" src="../../js/jquery-3.2.1.js"></script>
     <script language="javascript" type="text/javascript" src="../../js/main.js"></script>
     <script language="javascript" type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

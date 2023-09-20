@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-require_once 'modelo/usuario.php';
+require_once 'modelo/login.php';
 require_once 'modelo/conexion.php';
 
 $db = new Database();
@@ -23,9 +23,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($userData) {
         if ($userData['status'] === 'Activo') {
             session_regenerate_id(true);
-    
+
             $_SESSION['usuario'] = $userData;
-            header("Location: vista/empleado/index.php");
+            $_SESSION['tipoUsuario'] = $userData['tipoUsuario'];
+
+            if ($userData['tipoUsuario'] === 'admin') {
+                header("Location: vista/admin/index.php");
+            } elseif ($userData['tipoUsuario'] === 'estandar') {
+                header("Location: vista/empleado/index.php");
+            } else {
+            }
+
             exit();
         } else {
             $error = "El usuario no tiene acceso debido a su estado.";
