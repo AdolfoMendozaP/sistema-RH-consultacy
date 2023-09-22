@@ -133,10 +133,15 @@ function escaparHTML($string)
 						<li class="title-menu"><span class="fa fa-address-card icon-menu"></span>Onboarding</li>
 						<li class="go-back">Atras</li>
 
+<<<<<<< HEAD
 						<li><a href="../courses/index.php">Inducción</a></li>
                         <li><a href="../courses/course.php">Cursos</a></li>
                         <li><a href="../courses/buzon.php">Buzon</a></li>
 						<li><a href="../courses/profile.php">Perfiles</a></li>
+=======
+						<li><a href="#">Manual del Empleado</a></li>
+						<li><a href="#">Gestor de Archivos</a></li>
+>>>>>>> e5b4655e5dc870626117b6d22c4c030afab54666
 					</ul>
 				</li>
 

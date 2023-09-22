@@ -43,10 +43,17 @@ catch (PDOException $e)
         <a href="create.php" class="btn btn-primary mb-3 dynamic-button">
             <i class="fas fa-user-plus"></i> Nuevo Empleado
         </a>
+<<<<<<< HEAD
         <a href="personales/index.php" class="btn btn-secondary mb-3 dynamic-button" onclick="mostrarDatosPersonales()">
             <i class="fas fa-file-lines"></i> Datos Personales
         </a>
         <a href="index.php" class="btn btn-secondary mb-3 dynamic-button" onclick="mostrarDatosLaborales()">
+=======
+        <a href="#" class="btn btn-secondary mb-3 dynamic-button" onclick="mostrarDatosPersonales()">
+            <i class="fas fa-file-lines"></i> Datos Personales
+        </a>
+        <a href="#" class="btn btn-secondary mb-3 dynamic-button" onclick="mostrarDatosLaborales()">
+>>>>>>> e5b4655e5dc870626117b6d22c4c030afab54666
             <i class="fas fa-file-lines"></i> Datos Laborales
         </a>
         <a href="generadorExcel.php" class="btn btn-success mb-3 dynamic-button">
@@ -70,7 +77,11 @@ catch (PDOException $e)
             <?php foreach ($empleados as $empleado): ?>
     <tr>
         <td><?php echo $empleado['IDempleado']; ?></td>
+<<<<<<< HEAD
         <td><?php echo $empleado['nombre'] . ' ' . $empleado['apellido']; ?></td>
+=======
+        <td><?php echo $empleado['nombre'] . ' ' . $empleado['apellido']; ?></td> <!-- Fusiona nombre y apellido -->
+>>>>>>> e5b4655e5dc870626117b6d22c4c030afab54666
         <td><?php echo $empleado['email']; ?></td>
         <td><?php echo $empleado['alta']; ?></td>
         <td><?php echo $empleado['folio']; ?></td>

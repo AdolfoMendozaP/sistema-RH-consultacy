@@ -7,9 +7,13 @@ try {
     $db = new Database();
     $con = $db->conectar();
 
+<<<<<<< HEAD
     $query = "SELECT asistencias.IDempleado, empleado.nombre, empleado.apellido, empleado.folio, asistencias.fecha, asistencias.entrada, asistencias.salida 
     FROM asistencias 
     JOIN empleado ON asistencias.IDempleado = empleado.IDempleado";
+=======
+    $query = "SELECT * FROM asistencias";
+>>>>>>> e5b4655e5dc870626117b6d22c4c030afab54666
     $stmt = $con->prepare($query);
     $stmt->execute();
     $asistencias = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -47,8 +51,11 @@ try {
     <thead>
         <tr>
             <th>#</th>
+<<<<<<< HEAD
             <th>Nombre Completo</th>
             <th>Folio</th>
+=======
+>>>>>>> e5b4655e5dc870626117b6d22c4c030afab54666
             <th>Fecha</th>
             <th>Horario de Asistencia</th>
         </tr>
@@ -57,8 +64,11 @@ try {
         <?php foreach ($asistencias as $asistencia): ?>
             <tr>
                 <td><?php echo $asistencia['IDempleado']; ?></td>
+<<<<<<< HEAD
                 <td><?php echo $asistencia['nombre'] . ' ' . $asistencia['apellido']; ?></td>
                 <td><?php echo $asistencia['folio']; ?></td>
+=======
+>>>>>>> e5b4655e5dc870626117b6d22c4c030afab54666
                 <td><?php echo $asistencia['fecha']; ?></td>
                 <td class="horario-asistencia">
                     <div class="entrada">Entrada: <?php echo $asistencia['entrada']; ?></div>
