@@ -1,0 +1,171 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+header {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    margin: 0;
+    text-align: center;
+}
+
+section {
+    background-color: white;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+/* Estilos para la sección "perfilUsuario" */
+#perfilUsuario {
+    background-color: #ffffff;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.perfil-info {
+    text-align: center;
+}
+
+.perfil-info img {
+    max-width: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.perfil-info h2 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+.perfil-info p {
+    margin: 0;
+    font-size: 18px;
+    color: #777;
+}
+
+.perfil-info a {
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+}
+
+.perfil-info a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para la sección "Mi Progreso" */
+#miProgreso {
+    background-color: #fff3e2;
+    padding: 20px;
+}
+
+.curso {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.curso img {
+    max-width: 100px;
+    margin-right: 20px;
+}
+
+.curso-info {
+    flex-grow: 1;
+}
+
+.progress-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.progress-bar {
+    flex-grow: 1;
+    background-color: #ddd;
+    height: 15px;
+    border-radius: 5px;
+    margin-top: 5px;
+    overflow: hidden;
+}
+
+.progress {
+    background-color: #007BFF;
+    height: 100%;
+    transition: width 0.3s ease-in-out;
+}
+
+button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+
+
+/* Estilos para la sección "Constancias" */
+#constancias {
+    background-color: #ffffff;
+    padding: 20px;
+}
+
+#constancias h2 {
+    color: #007BFF;
+}
+
+/* Estilos para el pie de página */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+}
+
+.constancia {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.constancia img {
+    max-width: 100px;
+    margin-right: 20px;
+}
+
+.constancia p {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+}
